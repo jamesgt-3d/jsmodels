@@ -75,8 +75,7 @@ const main = (params) => {
       paint(colors[1], translate([offset[0] - 98, offset[1] + 1329, 0], deer)),
     ]
   }
-  console.log(params)
-  return params.herd || true
+  return params.herd
     ? [
       ...herd(['coral', 'peachpuff', 'lightcoral']),
       ...herd(['seagreen', 'palegreen', 'limegreen'], [648, 315, 0]),
@@ -87,9 +86,7 @@ const main = (params) => {
 }
 
 const getParameterDefinitions = () => [
-  //{ name: 'hires', type: 'checkbox', checked: true, initial: 0, caption: 'high resolution' },
   { name: 'herd', type: 'checkbox', checked: true, initial: 0, caption: 'herd' },
 ]
 
 module.exports = { main, getParameterDefinitions }
-//module.exports = { main }
