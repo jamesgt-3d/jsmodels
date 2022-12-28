@@ -53,7 +53,6 @@ const main = (params) => {
   const mirrorAntlers = repeat(head[0], head, 0, 38)
   const frontLegs = [
     // leg1
-    //[57, 1120], [36, 1191], [33, 1396], [82, 1353], [106, 1207], [191, 993],
     [57, 1120], [36, 1191], [33, 1396], ...repeat([33, 1396], antler1, 17, 18), [106, 1207], [191, 993],
     // leg2
     [246, 1003], [180, 1477], [211, 1461], [354, 1017], [400, 1000], [350, 1390],
@@ -77,7 +76,7 @@ const main = (params) => {
     ]
   }
   console.log(params)
-  return params.herd
+  return params.herd || true
     ? [
       ...herd(['coral', 'peachpuff', 'lightcoral']),
       ...herd(['seagreen', 'palegreen', 'limegreen'], [648, 315, 0]),
@@ -93,3 +92,4 @@ const getParameterDefinitions = () => [
 ]
 
 module.exports = { main, getParameterDefinitions }
+//module.exports = { main }
